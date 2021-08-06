@@ -31,11 +31,11 @@
                     </select>
                 </div>
 
-                 <div class="form-group">
+                <div class="form-group">
                     <label class="input-label d-block">{{ trans('admin/main.register_method') }}</label>
                     <select name="value[register_method]" class="form-control">
+                        <option value="mobile" @if(!empty($itemValue) and !empty($itemValue['register_method']) and $itemValue['register_method'] == 'mobile') selected @endif>{{ trans('admin/main.mobile') }}</option>
                         <option value="email" @if(!empty($itemValue) and !empty($itemValue['register_method']) and $itemValue['register_method'] == 'email') selected @endif>{{ trans('admin/main.email') }}</option>
-                        <option>{{ trans('admin/main.sms') }} (Paid Plugin)</option>
                     </select>
                 </div>
 
@@ -147,5 +147,4 @@
 </div>
 
 @push('scripts_bottom')
-    <script src="/assets/default/js/admin/settings/general_basic.min.js"></script>
 @endpush
