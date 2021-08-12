@@ -52,7 +52,7 @@
 
                         @if(!empty($footerColumns[$column]['value']))
                             <div class="mt-20">
-                                {!! clean($footerColumns[$column]['value']) !!}
+                                {!! $footerColumns[$column]['value'] !!}
                             </div>
                         @endif
                     @endif
